@@ -16,6 +16,7 @@ public:
     {
         cout << "The complex number is : " << a << "+" << b << "i" << endl;
     }
+    friend Complex sumComplex(Complex c1, Complex c2);
 };
 
 Complex sumComplex(Complex c1, Complex c2)
@@ -26,11 +27,12 @@ Complex sumComplex(Complex c1, Complex c2)
 }
 int main()
 {
-    Complex c1, c2 ,sum;
+    Complex c1, c2, sum;
     c1.setNumber(1, 2);
     c1.print();
     c2.setNumber(3, 4);
     c2.print();
-    sum = sumComplex(c1,c2);
+    sum = sumComplex(c1, c2);
+    sum.print();
     return 0;
 }
